@@ -149,7 +149,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 487268737}
-  m_Mesh: {fileID: 625791020}
+  m_Mesh: {fileID: 569015567}
 --- !u!23 &487268739
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -168,7 +168,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1500135052}
+  - {fileID: 1973898958}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -225,14 +225,14 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: Astronaut
+  mTrackableName: CSCardFront
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/VuforiaMars_Images.xml
-  mAspectRatio: 1.7272727
+  mDataSetPath: Vuforia/May-2020-BD.xml
+  mAspectRatio: 0.59018
   mImageTargetType: 0
-  mWidth: 0.06985
-  mHeight: 0.12065
+  mWidth: 0.1
+  mHeight: 0.059017997
 --- !u!4 &487268743
 Transform:
   m_ObjectHideFlags: 0
@@ -242,19 +242,19 @@ Transform:
   m_GameObject: {fileID: 487268737}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.12065, y: 0.12065, z: 0.12065}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 1501933511}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!43 &625791020
+--- !u!43 &569015567
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ImageTargetMesh-9246
+  m_Name: ImageTargetMesh13606
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -266,7 +266,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.28947368, y: 0, z: 0.5}
+      m_Extent: {x: 0.5, y: 0, z: 0.29509}
   m_Shapes:
     vertices: []
     shapes: []
@@ -345,7 +345,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: e53594be00000000000000bf000000000000803f000000000000000000000000e53594be000000000000003f000000000000803f00000000000000000000803fe535943e00000000000000bf000000000000803f000000000000803f00000000e535943e000000000000003f000000000000803f000000000000803f0000803f
+    _typelessdata: 000000bf00000000091697be000000000000803f000000000000000000000000000000bf000000000916973e000000000000803f00000000000000000000803f0000003f00000000091697be000000000000803f000000000000803f000000000000003f000000000916973e000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -691,23 +691,39 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.43003953
       objectReference: {fileID: 0}
+    - target: {fileID: -3659483131643510409, guid: 86c18f76dc19b7d4bacdbbc1b65d3240,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 86c18f76dc19b7d4bacdbbc1b65d3240,
         type: 3}
       propertyPath: m_Name
       value: Anatomy
       objectReference: {fileID: 0}
+    - target: {fileID: 6348799912465820142, guid: 86c18f76dc19b7d4bacdbbc1b65d3240,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86c18f76dc19b7d4bacdbbc1b65d3240, type: 3}
---- !u!21 &1500135052
+--- !u!4 &1501933511 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 86c18f76dc19b7d4bacdbbc1b65d3240,
+    type: 3}
+  m_PrefabInstance: {fileID: 1429591572}
+  m_PrefabAsset: {fileID: 0}
+--- !u!21 &1973898958
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'AstronautMaterial
+  m_Name: 'CSCardFrontMaterial
 
-    -9250'
+    13616'
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -720,15 +736,9 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 77fb44a366db5cb41b8c06649271f8e6, type: 3}
+        m_Texture: {fileID: 2800000, guid: 03856222683f4996b7578c8de7923bb6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
     - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
---- !u!4 &1501933511 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 86c18f76dc19b7d4bacdbbc1b65d3240,
-    type: 3}
-  m_PrefabInstance: {fileID: 1429591572}
-  m_PrefabAsset: {fileID: 0}
