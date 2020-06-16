@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: b91dddef189e4734e816909aed0e70b6
+  - enabled: 1
+    path: Assets/Scenes/VR.unity
+    guid: 4a3770e80c42b2e4b832238c92d4ade4
+  - enabled: 1
+    path: Assets/Scenes/Vuforia AR.unity
+    guid: ddb94606435f00f4181226fd62863e35
   m_configObjects: {}

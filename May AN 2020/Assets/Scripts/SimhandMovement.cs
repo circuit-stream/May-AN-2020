@@ -6,17 +6,36 @@ public class SimhandMovement : MonoBehaviour
 {
     public Transform m_hand;
     public float m_moveSpeed;
+    public bool m_isLocked;
 
     // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        m_isLocked = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.W))
+        #region Cursor Lockstate Toggle
+        if(Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (m_isLocked)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                m_isLocked = false;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                m_isLocked = true;
+            }
+        }
+        #endregion
+
+
+        if (Input.GetKey(KeyCode.W))
         {
             m_hand.Translate(Vector3.forward * Time.deltaTime * m_moveSpeed);
         }
