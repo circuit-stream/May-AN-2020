@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SimGrab : MonoBehaviour
+public class VRHand : MonoBehaviour
 {
+    public string m_gripName;
+    private bool m_gripHeld;
+
     public Animator m_anim;
     private GameObject m_touchingObject;
     private GameObject m_heldObject;
 
     private void OnTriggerStay(Collider other)
     {
-        if(other.tag == "Interactable")
+        if (other.tag == "Interactable")
         {
             m_touchingObject = other.gameObject;
         }
@@ -23,18 +26,23 @@ public class SimGrab : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        //if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetAxis(m_gripName) > 0.5f && m_gripHeld == false)
         {
+            m_gripHeld = true;
+
             m_anim.SetBool("isGrabbing", true);
-            if(m_touchingObject)
+            if (m_touchingObject)
             {
                 Grab();
             }
         }
-        else if(Input.GetKeyUp(KeyCode.Mouse1))
+        else if (Input.GetAxis(m_gripName) < 0.5f && m_gripHeld == true)
         {
+            m_gripHeld = false;
+
             m_anim.SetBool("isGrabbing", false);
-            if(m_heldObject)
+            if (m_heldObject)
             {
                 Release();
             }
