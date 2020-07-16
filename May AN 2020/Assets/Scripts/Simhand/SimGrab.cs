@@ -39,6 +39,20 @@ public class SimGrab : MonoBehaviour
                 Release();
             }
         }
+
+        if(Input.GetKeyDown(KeyCode.Mouse0) && m_heldObject)
+        {
+            m_heldObject.SendMessage("TriggerDown");
+        }
+
+        else if(Input.GetKeyUp(KeyCode.Mouse0) && m_heldObject)
+        {
+            m_heldObject.SendMessage("TriggerUp");
+        }
+        else if(Input.GetKeyDown(KeyCode.Mouse2) && m_heldObject)
+        {
+            m_heldObject.SendMessage("AltButtonDown");
+        }
     }
 
     void Grab()

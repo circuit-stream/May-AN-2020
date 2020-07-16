@@ -7,6 +7,11 @@ public class VRHand : MonoBehaviour
     public string m_gripName;
     private bool m_gripHeld;
 
+    public string m_triggerName;
+    private bool m_triggerHeld;
+
+    public string m_altButtonName;
+
     public Animator m_anim;
     private GameObject m_touchingObject;
     private GameObject m_heldObject;
@@ -46,6 +51,27 @@ public class VRHand : MonoBehaviour
             {
                 Release();
             }
+        }
+
+        if(Input.GetAxis(m_triggerName) >0.5f && m_triggerHeld == false)
+        {
+            m_triggerHeld = true;
+            if(m_heldObject)
+            {
+                m_heldObject.SendMessage("TriggerDown");
+            }
+        }
+        else if(Input.GetAxis(m_triggerName) <0.5f && m_triggerHeld == true)
+        {
+            m_triggerHeld = false;
+            if(m_heldObject)
+            {
+                m_heldObject.SendMessage("TriggerUp");
+            }
+        }
+        if(Input.GetButtonDown(m_altButtonName) && m_heldObject)
+        {
+            m_heldObject.SendMessage("AltButtonDown");
         }
     }
 
