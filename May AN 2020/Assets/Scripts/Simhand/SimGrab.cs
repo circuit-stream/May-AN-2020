@@ -36,6 +36,7 @@ public class SimGrab : MonoBehaviour
             m_anim.SetBool("isGrabbing", false);
             if(m_heldObject)
             {
+                m_heldObject.SendMessage("Released");
                 Release();
             }
         }
