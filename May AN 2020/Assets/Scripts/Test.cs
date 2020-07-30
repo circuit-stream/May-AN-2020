@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Test : MonoBehaviour
 {
+    AudioSource m_as;
     public Text m_myText;
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,6 @@ public class Test : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        m_as.volume = 0.2f;
     }
 }
