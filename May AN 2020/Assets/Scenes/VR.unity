@@ -11437,6 +11437,7 @@ GameObject:
   - component: {fileID: 1108079793}
   - component: {fileID: 1108079792}
   - component: {fileID: 1108079794}
+  - component: {fileID: 1108079795}
   m_Layer: 0
   m_Name: Left Hand
   m_TagString: Untagged
@@ -11522,6 +11523,26 @@ MonoBehaviour:
   m_triggerName: Left Trigger
   m_altButtonName: Left Menu
   m_anim: {fileID: 769381428}
+--- !u!114 &1108079795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108079789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 811cff2f09117544898f3df58e3cbaa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_horizontalAxis: 
+  m_verticalAxis: 
+  m_VRRig: {fileID: 315137496}
+  m_director: {fileID: 1108079790}
+  m_VRHead: {fileID: 2026407122}
+  m_notPlayerLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1235622158
 GameObject:
   m_ObjectHideFlags: 0
