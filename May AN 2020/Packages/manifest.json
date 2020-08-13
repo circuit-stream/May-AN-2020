@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.circuitstream.portalsdk": "file:C:/Users/ironu/Downloads/CircuitStreamPortalSDK",
     "com.ptc.vuforia.engine": "8.5.9",
     "com.unity.collab-proxy": "1.2.16",
     "com.unity.ide.rider": "1.1.4",
